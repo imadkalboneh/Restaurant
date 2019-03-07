@@ -12,13 +12,11 @@ grant select, insert, delete on demo1.* to 'demo1admin'@'127.0.0.1';
 create table members(
 first_name varchar(80),
 last_name varchar(80),
-email varchar(80),
 phone varchar(80),
-pass varchar(80),
 birth_month int,
 birth_day int,
+email varchar(80),
+pass varchar(80),
 joined date,
 primary key(email)
 );
-
-insert into members values('i', 'i', 'i', 'i', 'i', 1, 1, (select now()));

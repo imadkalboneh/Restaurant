@@ -104,10 +104,10 @@ public class DataAccess
 			m.setFname(rs.getString("first_name"));
 			m.setLname(rs.getString("last_name"));
 			m.setPhone(rs.getString("phone"));
-			m.setMonth(rs.getInt("month"));
-			m.setMonth(rs.getInt("day"));
+			m.setMonth(rs.getInt("birth_month"));
+			m.setMonth(rs.getInt("birth_day"));
 			m.setEmail(email);
-			m.setPass(rs.getString("password"));
+			m.setPass(rs.getString("pass"));
 			m.setJoined(rs.getDate("joined"));
 		}
 		

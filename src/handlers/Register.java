@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import java.io.*;
+
 import objects.*;
 
 /**
@@ -57,6 +59,7 @@ public class Register extends HttpServlet {
 			{
 				Member m = new Member(fname, lname, month, day, phone, email, pass2, null);
 				da.addMember(m);
+				record(fname, phone);
 				path += "home.jsp";
 				
 				m = da.getMember(email);
@@ -72,6 +75,20 @@ public class Register extends HttpServlet {
 		}
 		
 		response.sendRedirect(path);
+	}
+	
+	public void record(String name, String number)
+	{
+		try
+		{
+			FileWriter file = new FileWriter("temp.txt");
+			file.write(name + "\n" + number);
+			file.close();
+		}
+		
+		catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
