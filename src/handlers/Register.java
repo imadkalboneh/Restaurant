@@ -57,9 +57,11 @@ public class Register extends HttpServlet {
 			
 			else 
 			{
+				//create member object if successful
+				//add to db
+				//create text file to send thank you text message
 				Member m = new Member(fname, lname, month, day, phone, email, pass2, null);
 				da.addMember(m);
-				record(fname, phone);
 				path += "home.jsp";
 				
 				m = da.getMember(email);
@@ -74,6 +76,8 @@ public class Register extends HttpServlet {
 			path += "register.jsp";
 		}
 		
+		record(fname, phone);
+		Process p = Runtime.getRuntime().exec("python C:\\Users\\Imad\\Desktop\\text.py");		
 		response.sendRedirect(path);
 	}
 	
@@ -81,7 +85,7 @@ public class Register extends HttpServlet {
 	{
 		try
 		{
-			FileWriter file = new FileWriter("temp.txt");
+			FileWriter file = new FileWriter("rec.txt");
 			file.write(name + "\n" + number);
 			file.close();
 		}
@@ -90,5 +94,4 @@ public class Register extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
 }
