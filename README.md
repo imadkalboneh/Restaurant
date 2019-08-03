@@ -1,5 +1,6 @@
 # Restaurant
 
+<h1>Intro</h1>
 This just a simple website I'm working on to demonstrate what I can do. The example used here is a simple restaurant with<br>
 different levels of authority - members, admins and a@admin. A member is a client, and an admin is a staff member. <br>
 Members can do the following:<br>
@@ -54,8 +55,10 @@ Head over to <a href='https://www.apachefriends.org/download.html'>this link</a>
 
 Once installed, you'll need to run MySQL. To do so, launch it to open up a panel. Click on the <i>Start</i> button that lines up with <i>MySQL</i>, then click on <i>Shell</i> on the right side. Once the colsole opens up, type this command to use MySQL as root.<br><br>
 <i>mysql -u root</i><br><br>
-The name used here is MariaDb but it works exactly the same otherwise. 
 
+NOTE: The name used here is MariaDb but it works exactly the same otherwise. <br><br>
+
+To setup all the tables as I have them, open up the <i>Demo1 plans.txt</i> file, and copy/paste all the commands you see there in the <i>db setup</i> section.
 <h2>Python</h2>
 I've used version 3.5.7 to write the script used here in the WebContent/refs folder. If it works in a later version you've already installed, cheers! If not, go to <a href='https://www.python.org/downloads/'>this link</a> and look for v3.5.7 and follow the installation process. <br><br>NOTE: add python to your environment variables. It'll allow you to use the <i>python</i> command in your command line!
 
