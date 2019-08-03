@@ -50,6 +50,12 @@ Go to <a href='https://tomcat.apache.org/download-90.cgi'>this link</a> and look
 <h2>XAMPP</h2>
 Head over to <a href='https://www.apachefriends.org/download.html'>this link</a> and scroll through to find the right version for your OS. You'll need this program for the MySQL database it comes with.
 
+Once installed, you'll need to run MySQL. To do so, launch it to open up a panel. Click on the <i>Start</i> button that lines up with <i>MySQL</i>, then click on <i>Shell</i> on the right side. Once the colsole opens up, type this command to use MySQL as root.<br><br>
+<i>mysql -u root</i><br><br>
+
+NOTE: The name used here is MariaDb but it works exactly the same otherwise. <br><br>
+
+To setup all the tables as I have them, open up the <i>Demo1 plans.txt</i> file, and copy/paste all the commands you see there in the <i>db setup</i> section.
 <h2>MySQL connector file</h2>
 <a href='https://github.com/imadkalboneh/Restaurant/blob/master/WebContent/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar'>Click here</a> to download the .jar file. Alternatively, this can be found in the WebContent/WEB-INF/lib/ folder in this repository. <br><br>
 
